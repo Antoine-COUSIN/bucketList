@@ -1,0 +1,12 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f0e1 !important;
+}
+
+body header .navbar{
+    background-color: #a4a38c !important;
+}
+
+body .footer{
+    background-color: #eddcd2 !important;
+}
