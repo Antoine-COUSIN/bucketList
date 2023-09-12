@@ -7,11 +7,11 @@
         <h1>Bienvenue sur Bucket-List</h1>
         <br>
         <p>Ceci est le block body</p>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
-        <br><br>
     </div>
+{% endblock %}
+
+
+{% block javascriptsBodyFooter %}
+    <script src="{{ asset('assets/js/fixed_footer.js') }}"></script>
+    {{ parent() }}
 {% endblock %}
