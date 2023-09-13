@@ -1,6 +1,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: #f9f0e1 !important;
+    /*background-image: url("../img/paillette2.jpg");*/
+    /*background-position: center;*/
+    /*background-size: cover;*/
 }
 
 body header .navbar{

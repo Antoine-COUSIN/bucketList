@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | Home{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">About Us</h1>
+        <br>
+    </div>
+
+    <div class="container">
+        {% for member in teamMembers %}
+            <div class="team-member">
+                <img src="{{ member.getPicture }}" alt="{{ member.getFirstname }} {{ member.getLastname }}">
+                <h2>
+                    {{ member.getFirstname }}
+                    {{ member.getLastname }}
+                    {% if member.getFirstname == "Fabien" %}
+                        ❤
+                    {% endif %}
+                </h2>
+                <p>Date de naissance: {{ member.getDateOfBirth()|date('d-m-Y') }}</p>
+                <p>Créateur de: {{ member.getCreatorOf() }}</p>
+                <p>Description: {{ member.getDescription() }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+{% block javascriptsBodyFooter %}
+    <script src="{{ asset('assets/js/fixed_footer.js') }}"></script>
+    {{ parent() }}
+{% endblock %}
